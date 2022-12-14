@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.List;
 
 //Пусть дан произвольный список целых чисел, удалить из него четные числа
@@ -10,13 +9,7 @@ public class Task02 {
             list.add((int) (Math.random() * 100));
         }
         System.out.println(list);
-
-        Iterator<Integer> itr = list.iterator();
-        while (itr.hasNext()) {
-            if (itr.next() % 2 == 0){
-                itr.remove();
-            }
-        }
+        list.removeIf(integer -> integer % 2 == 0);
         System.out.println(list);
     }
 }
